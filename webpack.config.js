@@ -4,6 +4,10 @@ module.exports = {
     entry: {
         app: './src/App.js',
       },
+      output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
+      },
     plugins: [
         new HtmlWebPackPlugin({
             template: './src/index.html',
