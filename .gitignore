@@ -1,0 +1,12 @@
+# Mac stuff
+.DS_Store
+
+# NPM
+node_modules
+npm-debug.log
+
+# Dev
+.env
+
+# Build
+dist
