@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom';
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // CUSTOMIZED
-// import './assets/scss/style.scss';
+import './assets/scss/style.scss';
 
 // THIRD PARTY CSS
 // IF ANY WILL GOES HERE 
