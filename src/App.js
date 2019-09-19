@@ -9,30 +9,29 @@ import ReactDOM from 'react-dom';
 
 
 // BASE CSS FRAMEWORK
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-// CUSTOMIZED
-import './assets/scss/style.scss';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // THIRD PARTY CSS
 // IF ANY WILL GOES HERE 
 
+// CUSTOMIZED CSS
+import './assets/scss/style.scss';
+
 // BASE JS FRAMEWORK
-// import 'jquery';
-// import 'bootstrap';
+import 'bootstrap';
 
 // ROUTER
-import AppRouters from './routers/App';
+import App from './routers/App';
 
 
 // CONFIGURE APOLLO CLIENT
 
 // const { APOLLO_SERVICE } = process.env;
-// // APOLLO_SERVICE="https://staging-dot-apollo-dot-love-nest-233803.appspot.com/"
+// // APOLLO_SERVICE=""
 // console.debug(APOLLO_SERVICE);
 
 // const client = new ApolloClient({
-//   link: createUploadLink({ uri: process.env.APOLLO_SERVICE }),
+//   link: createUploadLink({ uri: APOLLO_SERVICE }),
 //   cache: new InMemoryCache(),
 // });
 
@@ -40,25 +39,16 @@ import AppRouters from './routers/App';
 /*
  * APP
  */
-// const RouterWithClient = withApollo(AppRouters);
-// const Main = () => {
-//   return (
-//     <React.Fragment>
-//       <MuiThemeProvider theme={theme}>
-//         <RouterWithClient />
-//       </MuiThemeProvider>
-//     </React.Fragment>
-//   );
-// };
+
 
 // ReactDOM.render(
 //   <ApolloProvider client={client}>
-//     <Main />
+//     <App />
 //   </ApolloProvider>,
 //   document.getElementById('root')
 // );
 
 ReactDOM.render(
-      <AppRouters />,
+      <App />,
     document.getElementById('root')
   );
