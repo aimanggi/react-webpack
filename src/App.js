@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Apollo
-// import { ApolloProvider, withApollo } from 'react-apollo';
-// import { createUploadLink } from 'apollo-upload-client';
-// import { ApolloClient } from 'apollo-client';
-// import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloProvider, withApollo } from 'react-apollo';
+import { createUploadLink } from 'apollo-upload-client';
+import { ApolloClient } from 'apollo-client';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 
 // BASE CSS FRAMEWORK
@@ -26,14 +26,13 @@ import App from './routers/App';
 
 // CONFIGURE APOLLO CLIENT
 
-// const { APOLLO_SERVICE } = process.env;
+const { APOLLO_SERVICE } = process.env;
 // // APOLLO_SERVICE=""
-// console.debug(APOLLO_SERVICE);
 
-// const client = new ApolloClient({
-//   link: createUploadLink({ uri: APOLLO_SERVICE }),
-//   cache: new InMemoryCache(),
-// });
+const client = new ApolloClient({
+  link: createUploadLink({ uri: "https://imp-learning-graphql-server.herokuapp.com/" }),
+  cache: new InMemoryCache(),
+});
 
 
 /*
@@ -41,14 +40,9 @@ import App from './routers/App';
  */
 
 
-// ReactDOM.render(
-//   <ApolloProvider client={client}>
-//     <App />
-//   </ApolloProvider>,
-//   document.getElementById('root')
-// );
-
 ReactDOM.render(
-      <App />,
-    document.getElementById('root')
-  );
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+);

@@ -21,7 +21,14 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/react'],
+                        plugins: [
+                            ['@babel/plugin-transform-arrow-functions', { loose: true }],
+                            ['@babel/plugin-proposal-class-properties', { loose: true }],
+                        ],
+                    },
                 }
             },
             {
@@ -29,6 +36,7 @@ module.exports = {
                 use: [
                     {
                         loader: "html-loader"
+
                     }
                 ]
             },
@@ -51,23 +59,23 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     {
-                      loader: 'url-loader',
-                      options: {
-                        limit: 100000,
-                      },
+                        loader: 'url-loader',
+                        options: {
+                            limit: 100000,
+                        },
                     },
-                  ],
+                ],
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
                     {
-                      loader: 'url-loader',
-                      options: {
-                        limit: 100000,
-                      },
+                        loader: 'url-loader',
+                        options: {
+                            limit: 100000,
+                        },
                     },
-                  ],
+                ],
             },
         ]
 
