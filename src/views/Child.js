@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, TextField } from '@material-ui/core';
  
 class Child extends Component {
     constructor(props) {
@@ -44,7 +44,26 @@ class Child extends Component {
                     </Grid>
                 </Grid>
                 </div>
+
                </form>
+               {/* <form onSubmit={(e) => this.submitForm(e)}>
+                <div className="wrapper">
+                <Grid container spacing={3}>
+                    <Grid item lg={3}>
+                    <TextField type="text" value={this.state.name} label="Name" onChange={(e) => this.onChange(e, 'name')} /> 
+                    </Grid>
+                    <Grid item lg={3}>
+                    <TextField type="email" value={this.state.email} label="Email" onChange={(e) => this.onChange(e, 'email')} /> 
+                    </Grid>
+                    <Grid item lg={3}>
+                    <TextField type="password" value={this.state.password} label="Password" onChange={(e) => this.onChange(e, 'password')} /> 
+                    </Grid>
+                    <Grid item lg={3}>
+                    <button type="submit">Sign Up</button>
+                    </Grid>
+                </Grid>
+                </div>
+               </form> */}
             </div>
         );
     }
