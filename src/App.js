@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Apollo
-import { ApolloProvider, withApollo } from 'react-apollo';
+import { ApolloProvider } from 'react-apollo';
 import { createUploadLink } from 'apollo-upload-client';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -25,10 +25,6 @@ import App from './routers/App';
 
 
 // CONFIGURE APOLLO CLIENT
-
-const { APOLLO_SERVICE } = process.env;
-// // APOLLO_SERVICE=""
-
 const client = new ApolloClient({
   link: createUploadLink({ uri: "https://imp-learning-graphql-server.herokuapp.com/" }),
   cache: new InMemoryCache(),
