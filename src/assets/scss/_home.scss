@@ -1,7 +1,58 @@
-.home {
-    text-align: center;
-    font-size: 42px;
+.hero {
+    position: relative;
+    color: #ffffff;
+
+   .hero-overlay {
+        background: rgba(198, 108, 73, 0.4);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        max-height: 768px;
+        z-index: 2;
+    }
+    .hero-image {
+        background: url('../img/hero-image.png');
+        height: 100vh;
+        max-height: 768px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 24px; 
+
+        .hero-title {
+            font-size: 64px;
+            line-height: 78px;
+            margin-bottom: 26px;
+        }
+    }
 }
-.image {
-    text-align: center;
+
+.about, .skill, .portfolio {
+    .title {
+        padding-bottom: 76px;
+    }
 }
+
+.skill {
+    .profile-image {
+        width: 80%;
+    }
+
+    .bar-bg {
+        background-color: $tertiary;
+        height: 24px;
+
+        .bar-top {
+            background-color: $secondary;
+            height: 24px;
+        }
+    }  
+}
+
