@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
+import Base from '../layout/Base';
+
 
 class Home extends Component {
     render() {
         return (
-            <div>
-                <div className="home">
-                    Hello World !
-                </div>
-            </div> 
-
+            <Base>
+                <section className="hero">
+                    <div className="hero-overlay"></div>
+                    <div className="hero-image"></div>
+                    <div className="hero-text">
+                        
+                    </div>
+                </section>
+            </Base>
         );
     }
 }
